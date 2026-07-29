@@ -1,7 +1,10 @@
 import React from "react";
 import BlogIllustration from "../assets/blog-illustration.webp";
+import { useNavigate } from "react-router-dom";
 
 function BlogDescription(){
+    const navigate = useNavigate();
+
     return <div className="blog-description-container">
         <img src={BlogIllustration} alt="blog illustration" />
 
@@ -14,7 +17,9 @@ function BlogDescription(){
         </p>
 
         <form>
-            <input className="name-btn" type="submit" value="Create Post" />
+            <input className="name-btn" type="submit" value="Create Post" onClick={(event) => {
+                navigate("/create");
+            }}/>
         </form>
     </div>;
 }

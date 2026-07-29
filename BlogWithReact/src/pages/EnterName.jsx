@@ -9,7 +9,6 @@ function EnterName(props){
         event.preventDefault(); //preventDefault behavior namely reloading
         
         props.onEnter(userName);
-        console.log(userName)
         
         navigate("/blog");   
     }
