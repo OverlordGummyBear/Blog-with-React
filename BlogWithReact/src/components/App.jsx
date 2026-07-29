@@ -15,7 +15,13 @@ function App() {
 
   const navigate = useNavigate(); //used to navigate to other pages
 
-  
+  function deletePost(id){
+    setPosts(prevPosts => {
+      return prevPosts.filter((postItem, index) => {
+        return index !== id;
+      })
+    })
+  }
 
 
   function onEnterUsername(name){
@@ -24,8 +30,10 @@ function App() {
 
   return <div>
     <Routes>
-      <Route path="/" element={userName === null ? <EnterName onEnter={onEnterUsername} /> : <Blog name={userName} postList={posts}/>} />
-      <Route path="/blog" element={<Blog name={userName} postList={posts} />} />
+      <Route path="/" element={userName === null ? 
+                              <EnterName onEnter={onEnterUsername} /> : 
+                              <Blog name={userName} postList={posts} onDelete={deletePost}/>} />
+      <Route path="/blog" element={<Blog name={userName} postList={posts} onDelete={deletePost}/>} />
       <Route path="/create" element={<CreatePosts />} />
     </Routes>
   </div>;

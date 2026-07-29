@@ -7,7 +7,7 @@ function PostList(props){
     return <div className="post-array-container">
         {posts.map((postItem, index) => {
             return (
-                <Post key={index} id={index} title={postItem.title} description={postItem.description} />
+                <Post key={index} id={index} title={postItem.title} description={postItem.description} onDelete={props.onDelete} />
             );
         })}
     </div>;

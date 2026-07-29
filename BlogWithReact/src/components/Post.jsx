@@ -13,7 +13,10 @@ function Note(props){
                 <input className="name-btn" type="submit" value="Edit" onClick={() => {
                     navigate("/create");
                 }}/>
-                <input className="name-btn" type="submit" value="Delete" />
+                <input className="name-btn" type="submit" value="Delete" onClick={(event) => {
+                    event.preventDefault();
+                    props.onDelete(props.id); //method to delete the post
+                }}/>
             </form>
         </div>
     </div>

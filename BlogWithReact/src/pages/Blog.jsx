@@ -11,7 +11,7 @@ function Blog(props){
             <Header content={"Hi " + props.name}/>
             <div className="post-page-container">
                 <BlogDescription />
-                <PostList posts={props.postList}/>
+                <PostList posts={props.postList} onDelete={props.onDelete}/>
             </div>
             <Footer/>
         </Fragment>
