@@ -24,7 +24,7 @@ function CreatePost(props){
     function handleSubmit(event){
         event.preventDefault();
         
-        props.onSave(post);
+        props.onSave(post, id);
         setPost({ //reset note
             title: "",
             description: ""

@@ -15,10 +15,16 @@ function App() {
 
   const navigate = useNavigate(); //used to navigate to other pages
 
-  function addPost(newPost){
+  function addPost(newPost, _){ //do not care about the second parameter if we are adding a post
     setPosts(prevPosts => {
       return [...prevPosts, newPost]; //...prevPosts copies the existing array and then adds the new post to the array
     });
+  }
+
+  function updatePost(updatedPost, id){
+    const newPosts = [...posts];
+    newPosts[id] = updatedPost;
+    setPosts(newPosts);
   }
 
   function deletePost(id){
@@ -27,10 +33,6 @@ function App() {
         return index !== id;
       })
     })
-  }
-
-  function updatePost(){
-
   }
 
   function onEnterUsername(name){
