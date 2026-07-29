@@ -11,7 +11,7 @@ function Note(props){
         <div className="post-btn-container">
             <form>
                 <input className="name-btn" type="submit" value="Edit" onClick={() => {
-                    navigate("/create");
+                    navigate(`/edit/${props.id}`);
                 }}/>
                 <input className="name-btn" type="submit" value="Delete" onClick={(event) => {
                     event.preventDefault();

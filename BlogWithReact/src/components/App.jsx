@@ -15,6 +15,12 @@ function App() {
 
   const navigate = useNavigate(); //used to navigate to other pages
 
+  function addPost(newPost){
+    setPosts(prevPosts => {
+      return [...prevPosts, newPost]; //...prevPosts copies the existing array and then adds the new post to the array
+    });
+  }
+
   function deletePost(id){
     setPosts(prevPosts => {
       return prevPosts.filter((postItem, index) => {
@@ -23,6 +29,9 @@ function App() {
     })
   }
 
+  function updatePost(){
+
+  }
 
   function onEnterUsername(name){
     setUsername(name);
@@ -32,9 +41,18 @@ function App() {
     <Routes>
       <Route path="/" element={userName === null ? 
                               <EnterName onEnter={onEnterUsername} /> : 
-                              <Blog name={userName} postList={posts} onDelete={deletePost}/>} />
-      <Route path="/blog" element={<Blog name={userName} postList={posts} onDelete={deletePost}/>} />
-      <Route path="/create" element={<CreatePosts />} />
+                              <Blog 
+                                name={userName} 
+                                postList={posts} 
+                                onDelete={deletePost}
+                              />} />
+      <Route path="/blog" element={<Blog 
+                                name={userName} 
+                                postList={posts} 
+                                onDelete={deletePost}
+                                  />} />
+      <Route path="/create" element={<CreatePosts onSave={addPost} />} />
+      <Route path="/edit/:id" element={<CreatePosts onSave={updatePost} posts={posts} /> } />
     </Routes>
   </div>;
 }

@@ -10,8 +10,8 @@ function Blog(props){
         <Fragment> {/* can also use div, but I do not think the container need any styling, but is just used to satisfy the one root rule */}
             <Header content={"Hi " + props.name}/>
             <div className="post-page-container">
-                <BlogDescription />
-                <PostList posts={props.postList} onDelete={props.onDelete}/>
+                <BlogDescription/>
+                <PostList posts={props.postList} onDelete={props.onDelete} />
             </div>
             <Footer/>
         </Fragment>
