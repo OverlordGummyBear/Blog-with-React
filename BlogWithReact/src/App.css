@@ -1,0 +1,269 @@
+.header {
+    background-color: #6D94C5;
+    margin: 0px 0px 50px 0px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+body {
+    background-color: #F5EFE6;
+    margin: 0%;
+}
+
+.welcome-container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-field {
+    font-size: 30px;
+    text-align: center;
+    background-color: #E8DFCA;
+}
+
+.name-title {
+    font-size: 50px;
+}
+
+.post-page-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 20px;
+}
+
+.blog-description-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E8DFCA;
+    max-width: 40vh;
+    max-height: 800px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.post-array-container {
+    display: flex;
+    width: 60vh;
+    min-height: 95vh;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E8DFCA;
+    min-width: 90%;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.post-btn-container {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.form-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.submit-button {
+    width: 50%;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    min-height: 70vh
+}
+
+.post-creation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E8DFCA;
+    max-width: 50vh;
+    padding: 20px;
+    border-radius: 15px;
+    height: 45vh;
+}
+
+.save-input {
+    border: 0px;
+    padding: 0px;
+    background-color: #E8DFCA;
+}
+
+.blog-title {
+    text-align: center;
+    font-size: 30px;
+    width: 500px;
+}
+
+.blog-description {
+    height: 100%;
+    width: 500px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.form-create-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+    height: 45vh;
+}
+
+.save-input.blog-title {
+    font-family: "Jockey One", sans-serif;
+}
+
+.save.save-input.blog-description {
+    font-family: "Red Hat Display", sans-serif;
+    margin: 5px;
+}
+
+footer {
+    align-items: left;
+    margin-left: 20px;
+    padding-top: 40px;
+}
+
+p {
+    font-size: 20px;
+    margin-top: 0px;
+    overflow-wrap: break-word;
+    /*breaks long words, together with the line beneath*/
+    word-break: break-word;
+}
+
+@media(max-width: 1200px) {
+    .post-page-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blog-description {
+        max-width: 40vh;
+        width: 40vh;
+        padding: 20px;
+    }
+
+    .post-array-container {
+        max-width: 40vh;
+        width: 40vh;
+        padding: 0px;
+    }
+
+    .post-container {
+        max-width: 40vh;
+        width: 40vh;
+        min-width: unset !important;
+
+    }
+}
+
+@media(max-width: 550px) {
+    .blog-description {
+        width: 250px;
+        font-size: 16px;
+    }
+
+    .blog-title {
+        width: 250px;
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 450px) {
+    .post-container {
+        width: 250px;
+    }
+
+    .blog-description-container {
+        width: 250px;
+    }
+
+    .post-array-container {
+        width: 250px;
+    }
+}
+
+/* @media screen and (orientation: landscape){
+
+} */
+
+
+/* Buttons*/
+.name-btn {
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, .1) 0 6px 20px;
+    box-sizing: border-box;
+    color: #121212;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 1 1 auto;
+    font-family: Inter, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    justify-content: center;
+    line-height: 1;
+    margin: 0;
+    outline: none;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s, -webkit-box-shadow .2s;
+    white-space: nowrap;
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.jockey-one-regular {
+    font-family: "Jockey One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.suse-mono {
+    font-family: "SUSE Mono", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.red-hat-display {
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}

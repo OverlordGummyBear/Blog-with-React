@@ -20,11 +20,11 @@ function EnterName(props){
         setUsername(value);
     }
 
-    return <div>
-        <h1> What is your name? </h1>
-        <form>
-            <input onChange={handleChange} type="text" name="fName" placeHolder="Name" value={userName}/> {/* value is used to control the text field */}
-            <input onClick={handleSubmit} type="submit" value="Enter"/>
+    return <div class="welcome-container">
+        <h1 class="suse-mono name-title"> What is your name? </h1>
+        <form class="form-container">
+            <input class="name-field" onChange={handleChange} type="text" name="fName" placeHolder="Name" value={userName}/> {/* value is used to control the text field */}
+            <input class="name-btn jockey-one-regular" onClick={handleSubmit} type="submit" value="Enter"/>
         </form>
     </div>
 }
