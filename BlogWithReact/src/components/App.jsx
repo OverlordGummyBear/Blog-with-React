@@ -8,8 +8,12 @@ import CreatePosts from "../pages/CreatePost";
 import EnterName from "../pages/EnterName";
 
 function App() {
-  const [userName, setUsername] = useState(false); 
+  const [userName, setUsername] = useState(null); 
   const navigate = useNavigate(); //used to navigate to other pages
+
+  function onEnterUsername(name){
+    setUsername(name);
+  }
 
   function HandleCreateClick(){
     navigate("/blog");
@@ -17,8 +21,8 @@ function App() {
 
   return <div>
     <Routes>
-      <Route path="/" element={userName ? <EnterName /> : <EnterName />} />
-      <Route path="/blog" element={<Blog />} />
+      <Route path="/" element={userName === null ? <EnterName onEnter={onEnterUsername} /> : <Blog name={userName} />} />
+      <Route path="/blog" element={<Blog name={userName} />} />
       <Route path="/create" element={<CreatePosts />} />
     </Routes>
   </div>;
