@@ -9,7 +9,10 @@ import EnterName from "../pages/EnterName";
 
 function App() {
   const [userName, setUsername] = useState(null); 
+  const [posts, setPosts] = useState([]);
+
   const navigate = useNavigate(); //used to navigate to other pages
+
 
   function onEnterUsername(name){
     setUsername(name);
