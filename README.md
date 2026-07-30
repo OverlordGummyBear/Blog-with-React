@@ -22,3 +22,6 @@ npm run dev
 
 ## Usage
 Open the URL shown in your terminal (usually http://localhost:5173/) in your browser to view the blog
+
+## Repo using Axios & EJS
+GitHub: https://github.com/OverlordGummyBear/Blog
